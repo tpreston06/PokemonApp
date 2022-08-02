@@ -11,11 +11,17 @@ app.engine('jsx', require('express-react-views').createEngine()) //Initializing 
 app.get('/', (req, res) => {
     res.send('Welcome to Pokemon App!');
 });
-app.get('/pokemon', (req, res) =>{
-    //res.send(pokemon);
+app.get('/pokemon', (req, res) => {
+    pokemon.forEach(function (pokemon) {
+        return pokemon.toLocaleUpperCase[i]
+    })
     res.render('Index', {pokemon: pokemon});
 });
 
+//show
+app.get('/pokemon/:id', (req, res) => {
+     res.send(req.params.id);
+ });
 
 
 
