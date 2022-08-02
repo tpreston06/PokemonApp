@@ -9,13 +9,13 @@ app.engine('jsx', require('express-react-views').createEngine()) //Initializing 
 
 //route
 
-// app.get('/pokemon/:id', (req, res) => {
-//      res.render('Show', {pokemon: pokemon[req.params.id]});
-//  });
+app.get('/pokemon/:id', (req, res) => {
+     res.render('Show', {pokemon: pokemon[req.params.id]});
+ });
 
- app.get('/pokemon/:id', function(req, res) {
-    res.send(req.params.id)
-});
+//  app.get('/pokemon/:id', function(req, res) {
+//     res.send(req.params.id)
+// });
 
 app.get('/pokemon', (req, res) => {
     res.render('Index', {pokemon: pokemon});
