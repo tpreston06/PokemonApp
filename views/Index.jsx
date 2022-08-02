@@ -11,6 +11,7 @@ const myStyle = {
           return (
                   <div style = {myStyle}> 
                       <h1>See All The Pokemon</h1>
+                      <div style={myStyle}>My First React Component</div>
                       <ul>
                         {pokemon.map((pokemon, i) =>{
                             return (

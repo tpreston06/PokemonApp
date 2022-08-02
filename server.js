@@ -12,16 +12,17 @@ app.get('/', (req, res) => {
     res.send('Welcome to Pokemon App!');
 });
 app.get('/pokemon', (req, res) => {
-    pokemon.forEach(function (pokemon) {
-        return pokemon.toLocaleUpperCase[i]
-    })
     res.render('Index', {pokemon: pokemon});
 });
 
-//show
 app.get('/pokemon/:id', (req, res) => {
-     res.send(req.params.id);
+     res.render('Show', {pokemon: pokemon[req.params.id]});
  });
+
+ app.get('/pokemon/:id', function(req, res) {
+    res.send(req.params.id)
+});
+
 
 
 
